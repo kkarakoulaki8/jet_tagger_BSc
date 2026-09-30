@@ -9,6 +9,14 @@ This repository contains the code to help you get started with training a jet ta
 * `plot/style.py` — Helper functions used in the notebook for consistent plotting and figure styling.
 * `training_data_CMS` — Symbolic link to the training dataset stored on the DICE cluster.
 
+## Accessing DICE
+
+The repository and training data are intended to be used on the **DICE**.
+
+Instructions for connecting to DICE using VS Code can be found in the [Visual Studio Code Remote SSH documentation](https://code.visualstudio.com/docs/remote/ssh).
+
+You will need to have **Conda installed on DICE** in order to create the required environment and run the notebook.
+
 ## Training Data
 
 The training data are not stored directly in this GitHub repository.
@@ -35,13 +43,6 @@ Each jet is represented using its **16 highest-pT candidates (constituents)**. F
 The input to the model therefore has the shape: (16, 20)
 
 
-## Accessing DICE
-
-The repository and training data are intended to be used on the **DICE cluster**.
-
-Instructions for connecting to DICE using VS Code can be found in the [Visual Studio Code Remote SSH documentation](https://code.visualstudio.com/docs/remote/ssh).
-
-You will need to have **Conda installed on DICE** in order to create the required environment and run the notebook.
 
 ## Setting Up the Environment
 
