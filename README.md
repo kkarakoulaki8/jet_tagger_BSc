@@ -7,7 +7,7 @@ This repository contains the code to help you get started with training a jet ta
 * `train_jet_tagger.ipynb` — Jupyter notebook containing the training and evaluation workflow for the jet tagger.
 * `environment.yml` — Conda environment configuration containing the required dependencies.
 * `plot/style.py` — Helper functions used in the notebook for consistent plotting and figure styling.
-* `training_data_CMS` — Symbolic link to the training dataset stored on the DICE cluster.
+* `training_data_CMS` — Symbolic link to the training dataset stored on the DICE.
 
 ## Accessing DICE
 
@@ -21,7 +21,7 @@ You will need to have **Conda installed on DICE** in order to create the require
 
 The training data are not stored directly in this GitHub repository.
 
-The `training_data_CMS` directory is a symbolic link to the dataset stored on the DICE cluster:
+The `training_data_CMS` directory is a symbolic link to the dataset stored on the DICE:
 
 ```text
 /dice/users/bm24156/training_data_latest/
