@@ -21,7 +21,7 @@ You will need to have **Conda installed on DICE** in order to create the require
 
 The training data are not stored directly in this GitHub repository.
 
-The `training_data_CMS` directory is a symbolic link to the dataset stored on the DICE:
+The `training_data_CMS` directory is a symbolic link to the dataset stored on DICE:
 
 ```text
 /dice/users/bm24156/training_data_latest/
