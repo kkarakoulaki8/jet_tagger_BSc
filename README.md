@@ -7,11 +7,11 @@ This repository contains the code to help you get started with training a jet ta
 * `train_jet_tagger.ipynb` — Jupyter notebook containing the training and evaluation workflow for the jet tagger.
 * `environment.yml` — Conda environment configuration containing the required dependencies.
 * `plot/style.py` — Helper functions used in the notebook for consistent plotting and figure styling.
-* `training_data_CMS` — Symbolic link to the training dataset stored on the DICE.
+* `training_data_CMS` — Symbolic link to the training dataset stored on DICE.
 
 ## Accessing DICE
 
-The repository and training data are intended to be used on the **DICE**.
+The repository and training data are intended to be used on **DICE**.
 
 Instructions for connecting to DICE using VS Code can be found in the [Visual Studio Code Remote SSH documentation](https://code.visualstudio.com/docs/remote/ssh).
 
