@@ -58,20 +58,18 @@ Create the Conda environment using the provided environment file:
 conda env create -f environment.yml
 ```
 
-Activate the newly created environment:
+Activate the environment:
 
 ```bash
 conda activate tagger
 ```
-
-The required dependencies will be installed automatically from `environment.yml`.
 
 ## Running the Jet Tagger
 
 Once the environment has been created and activated:
 
 1. Open `train_jet_tagger.ipynb` in VS Code.
-2. Select the newly created Conda environment as the Python kernel.
+2. Select the Conda environment as the Python kernel.
 3. Run the notebook cells.
 
 The notebook contains the complete workflow for:
