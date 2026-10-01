@@ -41,7 +41,7 @@ def set_style():
 
     plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
     plt.rc('axes', titlesize=BIGGER_SIZE)    # fontsize of the axes title
-    plt.rc('axes', labelsize=BIGGER_SIZE+5)    # fontsize of the x and y labels
+    plt.rc('axes', labelsize=BIGGER_SIZE+10)    # fontsize of the x and y labels
     plt.rc('axes', linewidth=LINEWIDTH+2)              # thickness of axes
     plt.rc('xtick', labelsize=MEDIUM_SIZE)    # fontsize of the tick labels
     plt.rc('ytick', labelsize=MEDIUM_SIZE)    # fontsize of the tick labels

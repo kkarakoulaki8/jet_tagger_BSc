@@ -5,7 +5,7 @@ This repository contains the code to help you get started with training a jet ta
 ## Repository Structure
 
 * `train_jet_tagger.ipynb` — Jupyter notebook containing the training and evaluation workflow for the jet tagger.
-* `environment.yml` — Conda environment configuration containing the required dependencies.
+* `pixi.toml` — contains all the packages you need to run the code and will be used by Pixi (a package management tool) to install all of them in one place.
 * `plot/style.py` — Helper functions used in the notebook for consistent plotting and figure styling.
 * `training_data_CMS` — Symbolic link to the training dataset stored on DICE.
 
@@ -15,7 +15,19 @@ The repository and training data are intended to be used on **DICE**.
 
 Instructions for connecting to DICE using VS Code can be found in the [Visual Studio Code Remote SSH documentation](https://code.visualstudio.com/docs/remote/ssh).
 
-You will need to have **Conda installed on DICE** in order to create the required environment and run the notebook.
+You will need to have **Pixi installed on DICE** in order to create the required environment and run the notebook. https://pixi.prefix.dev/latest/
+
+## Cloning the respiratory on DICE
+After connecting on DICE using VS code. Go to your software directory where you can keep all your code:
+
+```bash
+cd /software/<your-username>/
+```
+and then clone this repository using this command:
+
+```bash
+git clone https://github.com/kkarakoulaki8/jet_tagger_BSc.git
+```
 
 ## Training Data
 
@@ -46,22 +58,31 @@ The input to the model therefore has the shape: (16, 20)
 
 ## Setting Up the Environment
 
+Install pixi on dice:
+```bash
+curl -fsSL https://pixi.sh/install.sh | sh
+```
+
 After cloning the repository on DICE, navigate to the repository directory:
 
 ```bash
 cd jet_tagger_BSc
 ```
-
-Create the Conda environment using the provided environment file:
+Create the environment using the provided environment file:
 
 ```bash
-conda env create -f environment.yml
+pixi install 
+
 ```
-
-Activate the environment:
+Then run this command so that your terminal recognises the changes:
 
 ```bash
-conda activate tagger
+source ~/.bashrc
+```
+To be able to use the environment in a jupyter notebook run this command:
+
+```bash
+pixi run python -m ipykernel install --user     --name jet-tagger-pixi     --display-name "Jet Tagger (Pixi)"
 ```
 
 ## Running the Jet Tagger
@@ -69,7 +90,7 @@ conda activate tagger
 Once the environment has been created and activated:
 
 1. Open `train_jet_tagger.ipynb` in VS Code.
-2. Select the Conda environment as the Python kernel.
+2. Select the pixi environment as the Jupyter kernel.
 3. Run the notebook cells.
 
 The notebook contains the complete workflow for:
@@ -79,3 +100,5 @@ The notebook contains the complete workflow for:
 * Testing and evaluating the model.
 * Producing and saving plots.
 
+
+This github repo is based on https://github.com/CMS-L1T-Jet-Tagging/TrainTagger
