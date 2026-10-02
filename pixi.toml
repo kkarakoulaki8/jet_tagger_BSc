@@ -28,3 +28,6 @@ pyparsing = "*"
 schema = "*"
 hgq2 = "*"
 da4ml = "*"
+
+[tasks]
+jupyter = "jupyter lab"

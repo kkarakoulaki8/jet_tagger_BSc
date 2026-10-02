@@ -79,17 +79,33 @@ Then run this command so that your terminal recognises the changes:
 ```bash
 source ~/.bashrc
 ```
-To be able to use the environment in a jupyter notebook run this command:
+To be able to use the environment in a jupyter notebook run the following commands:
 
 ```bash
 pixi run python -m ipykernel install --user     --name jet-tagger-pixi     --display-name "Jet Tagger (Pixi)"
 ```
+```bash
+mkdir -p .vscode
+```
+```bash
+nano .vscode/settings.json
+```
+Copy and paste this into settings.json:
+```
+{
+    "python.defaultInterpreterPath": "/software/<your_username>/jet_tagger_BSc/.pixi/envs/default/bin/python"
+}
+```
+To exit press ctrl+X and to save press Y
 
 ## Running the Jet Tagger
 
 Once the environment has been created and activated:
 
-1. Open `train_jet_tagger.ipynb` in VS Code.
+1. Open `train_jet_tagger.ipynb` in VS Code:
+    * Go to File
+    * Open Folder 
+    * Type /users/<your_username>/ (which is where you cloned before the git repo)
 2. Select the pixi environment as the Jupyter kernel.
 3. Run the notebook cells.
 
